@@ -1,5 +1,7 @@
+# https://hub.docker.com/r/mysticvideo/devtoolset-6-toolchain-centos6
 FROM mysticvideo/devtoolset-6-toolchain-centos6
 
+# https://www.getpagespeed.com/server-setup/how-to-fix-yum-after-centos-6-went-eol
 RUN rm -rf /etc/yum.repos.d && \
   mkdir -p /etc/yum.repos.d && \
   curl https://www.getpagespeed.com/files/centos6-eol.repo --output /etc/yum.repos.d/CentOS-Base.repo && \
