@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  python3-rhel6:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # Max vers is 3.6.15
+      args:
+        PYTHON_VERS: "3.6.15"
+    image: python3-rhel6:latest
+    volumes:
+      - ./dist:/dist
+    container_name: python3-rhel6
